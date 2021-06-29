@@ -4,13 +4,16 @@ const bodyParser = require('body-parser');
 const multipart = require('connect-multiparty');
 const cors = require('cors');
 const fs = require('fs');
-
+const whitelist = [
+    'https://hp0281.github.io',
+    'http://localhost:4200'
+];
 
 const app = express();
  
 app.set('port', process.env.PORT || 3000);
 
-app.use(cors()) ;
+app.use(cors({ origin: whitelist }));
 app.use(morgan('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
@@ -116,7 +119,7 @@ app.post('/api/subirDN', multipartMiiddlewareD, (req, res) => {
     res.json({mensaje: "archivo subido"});
 });
 app.get('/', (req, res) => {
-    res.send('hola mundo');
+    res.send('hola mundo' + PORT);
 });
 module.exports = app;
 
