@@ -1,0 +1,26 @@
+###
+
+GET http://localhost:3000/participantes
+
+###
+
+POST http://localhost:3000/participantes
+Content-Type: application/json
+
+{
+    "name": "Harold",
+    "apname": "parra gonzalez",
+    "cedula": 10245118874,
+    "eps": "medialgo",
+    "fecNac": "05/08/2012",
+    "edad": 24,
+    "rh": "ab+",
+    "codpart": "14578a",
+    "diag": "trigliceridos chistosos",
+    "obpar": "inteligente el man"
+
+}
+
+###
+
+GET http://localhost:3000/participantes
