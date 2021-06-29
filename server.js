@@ -119,7 +119,7 @@ app.post('/api/subirDN', multipartMiiddlewareD, (req, res) => {
     res.json({mensaje: "archivo subido"});
 });
 app.get('/', (req, res) => {
-    res.send('hola mundo' + PORT);
+    res.send('hola mundo' + app.get('port'));
 });
 module.exports = app;
 
