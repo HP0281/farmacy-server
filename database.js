@@ -1,6 +1,6 @@
 const mongoose  = require("mongoose");
 mongoose
-.connect("mongodb://Localhost:farmacy", {
+.connect("mongodb+srv://hp0281:app-farmacy@app-farmacy.c4kxi.mongodb.net/myFirstDatabase?retryWrites=true&w=majority", {
     useUnifiedTopology:true,
     useNewUrlParser: true,
     useFindAndModify: false
