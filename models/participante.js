@@ -19,7 +19,7 @@ const participantSchema = new Schema({
 });
 
 participantSchema.methods.setUrlimg = function setUrlimg(filename){
-    this.imgurl =`http://localhost:3000/fotos/${ filename }`
+    this.imgurl =`/fotos/${ filename }`
 }
 
 module.exports = model('Participante', participantSchema);
