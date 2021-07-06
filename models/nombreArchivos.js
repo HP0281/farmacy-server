@@ -10,7 +10,7 @@ const nameArchiSchema = new Schema({
 });
 
 nameArchiSchema.methods.setruta = function setruta(filename){
-    this.ruta = `http://localhost:3000/docs/${ filename }`
+    this.ruta = `/docs/${ filename }`
 } 
 
 module.exports = model('nameArchivos', nameArchiSchema);
