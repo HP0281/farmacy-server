@@ -38,11 +38,19 @@ medicamentoCtrl.updateCantidadE = async (req, res) => {
         concentracion:c,
         presentacion:p,
         lab:l
+    }).exec();
+    if(med){
+        const cantidad = med.cantidad + req.body.cantidad;
+        med.cantidad = cantidad;
+        console.log(med);
+        await medicamento.findByIdAndUpdate(med._id, med);
+    }else{
+        const medicament = new medicamento(req.body);
+        await medicament.save()
+    res.send({
+        message: 'medicamento creado'
     })
-    const cantidad = med.cantidad + req.body.cantidad;
-    med.cantidad = cantidad;
-    console.log(med);
-    await medicamento.findByIdAndUpdate(med._id, med, {upsert: true});
+    }
 
 }
 medicamentoCtrl.updateCantidadS = async (req, res) => {
