@@ -14,7 +14,7 @@ nameArchivosCtrl.getNames = async (req, res) => {
             console.log(files[i]);
             const nameA = new nameArchivo({
                 name: files[i],
-                ruta: "http://localhost:3000/docs" + "/"+ files[i]
+                ruta: "/docs" + "/"+ files[i]
             });
              nameA.save();
             
