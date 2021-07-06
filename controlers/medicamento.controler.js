@@ -42,7 +42,7 @@ medicamentoCtrl.updateCantidadE = async (req, res) => {
     const cantidad = med.cantidad + req.body.cantidad;
     med.cantidad = cantidad;
     console.log(med);
-    await medicamento.updateOne(med._id, med, "upsert:true");
+    await medicamento.updateOne(med._id, med, {"upsert":"true"});
 
 }
 medicamentoCtrl.updateCantidadS = async (req, res) => {
@@ -59,7 +59,7 @@ medicamentoCtrl.updateCantidadS = async (req, res) => {
     const cantidad = med.cantidad - req.body.cantidad;
     med.cantidad = cantidad;
     console.log(med);
-    await medicamento.updateOne(med._id, med, "upsert:true");
+    await medicamento.updateOne(med._id, med, {"upsert":"true"});
 
 }
 
