@@ -1,6 +1,9 @@
 ###
 
-GET http://localhost:3000/participantes
+GET https://app-farmacy.herokuapp.com/participantes
+
+###
+GET http://localhost:8080/recovereds
 
 ###
 
@@ -23,4 +26,11 @@ Content-Type: application/json
 
 ###
 
-GET http://localhost:3000/participantes
+GET http://localhost:3000/participantes/60be9824e60eb64a485c7b78
+
+###
+
+GET http://localhost:3000/names
+
+###
+DELETE http://localhost:3000/names

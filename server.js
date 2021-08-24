@@ -8,6 +8,7 @@ const whitelist = [
     'https://hp0281.github.io',
     'http://localhost:4200'
 ];
+let arra = Array();
 
 const app = express();
  
